@@ -8,7 +8,7 @@
     "local": "NODE_ENV='local' nodemon ./server.js",
     "dev": "NODE_ENV='development' nodemon ./server.js",
     "start": "node server.js",
-    "test": "mocha --parallel \"tests/**/*.test.js\" --timeout 15000",
+    "test": "mocha --parallel \"tests/**/*.test.js\" --timeout 15000 -r dotenv/config",
     "watch": "mocha --parallel \"tests/**/*.test.js\" --timeout 5000 --watch"
   },
   "repository": {
@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/JRyGithub/frenchCompanyPhoneFinder#readme",
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "chai": "^4.3.4",
+    "mocha": "^9.1.4"
   },
   "dependencies": {
     "axios": "^0.25.0",

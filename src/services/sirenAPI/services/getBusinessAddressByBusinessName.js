@@ -9,7 +9,6 @@ export const getBusinessAddressByBusinessName = async(businessName) => {
     const response = await apiRequest({method: `get`, url: SIRET_URL,token: process.env.SIREN_ACCESS_TOKEN})
     return response.data
   }catch(error){
-    console.log(error.message);
     throw error
   }
 }

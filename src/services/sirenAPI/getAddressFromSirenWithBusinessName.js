@@ -1,9 +1,13 @@
 import { getBusinessAddressByBusinessName } from "./services/getBusinessAddressByBusinessName.js"
 
 export const getAddressFromSirenWithBusinessName = async(businessName) => {
+  try{
     let payload = await getBusinessAddressByBusinessName(businessName)
     const address = parseAddress(payload)
     return {address}
+  }catch(error){
+    throw error
+  }
 }
 
 const parseAddress= payload => {

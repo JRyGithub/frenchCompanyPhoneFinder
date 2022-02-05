@@ -8,7 +8,6 @@ export const getPlaceIdByTextSearch = async(businessName,address) => {
     const response = await apiRequest({method: `get`, url: GOOGLE_TEXT_SEARCH_URL})
     return response.data
   }catch(error){
-    console.log(error.message);
     throw error
   }
 }

@@ -7,9 +7,8 @@ const getBusinessPhoneNumber = async(query) => {
     const {inputModel,validityError} = inputValidator(query)
     if(validityError) return {error: validityError}
     const googleDetails = await getDetailsForGoogle({...inputModel})
-    console.log({googleDetails})
     const phoneNumber = await getPhoneNumberFromGoogle(googleDetails)
-
+    if(!phoneNumber) {phoneNumber: `Could not find number`}
     return {phoneNumber}
   }catch(error){
     throw error
