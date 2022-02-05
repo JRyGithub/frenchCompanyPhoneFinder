@@ -2,6 +2,7 @@ import { getBusinessAddressByBusinessName } from "./services/getBusinessAddressB
 
 export const getAddressFromSirenWithBusinessName = async(businessName) => {
   try{
+    businessName= `PARIS%20ATLIERS`
     let payload = await getBusinessAddressByBusinessName(businessName)
     const address = parseAddress(payload)
     return {address}

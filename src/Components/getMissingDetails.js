@@ -8,6 +8,8 @@ export const getMissingDetails = async (businessName, siren, siret) => {
     else if (siret) return await getBusinessDetailsFromSirenWithSiret(siret)
     else return await getBusinessDetailsFromSirenWithSiren(siren)
   }catch(error){
+    //This logic is to allow google to search for a business name even if the address could not be found in the SIREN registry
+    if(businessName) return {businessName,address: ``}
     throw error    
   } 
 }

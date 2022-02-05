@@ -17,12 +17,11 @@ api.get(`/getPhoneNumber`,errorCatcher(async(req,res) => {
   if(Object.entries(query).length === 0) return res.status(400).send({error: `No query string present. Please see documentation.`})
   const {phoneNumber,error} = await getBusinessPhoneNumber(query)
   if(error) return res.status(400).send({error})
+  if(!phoneNumber) return res.status(404).send(`Could not find that company number`)
   return res.send({phoneNumber})
   }
   catch(error){
-    // console.log(error.message)
-    // console.log(error.stack);
-    res.status(error.status).send(error.message)
+    res.status(error?.status || 404).send(error.message)
   }
 }))
 
