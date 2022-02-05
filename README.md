@@ -36,9 +36,9 @@ Where either one of businessName, sirent or siren number is required. Extras are
 
 With more time etc, or for expansions for production ready code, I would add in more custom error messages. Allowing users to see exactly what was wrong and where.
 
-I tried to use the SIREN API along with the Google Maps API as this allowed me to get the exact address accorinding to the French government. Then I could use that address to enhance the ability. Of the search. To increase its performance I could allow more parameters etc.
+I tried to use the SIREN API along with the Google Maps API as this allowed me to get the exact address according to the French government. Then I could use that address to enhance the ability. Of the search. To increase its performance I could allow more parameters etc.
 
-My style of coding is minimislist comments as hopefully the code reads for itself as that is my current work places practice. Understandly that is not for everyone. Would love to know your thoughts.
+My style of coding is little to no comments as hopefully the code reads for itself as that is my current work places practice. Understandably that is not for everyone. Would love to know your thoughts.
 
 I would like for further use to put a Swagger UI for playing with the API and maybe more end points and auth etc.
 
