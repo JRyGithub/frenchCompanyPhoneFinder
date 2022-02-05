@@ -1,0 +1,34 @@
+{
+  "name": "frenchcompanyphonefinder",
+  "version": "1.0.0",
+  "description": "A Node.js API for finding French companies phone numbers",
+  "main": "api.js",
+  "type": "module",
+  "scripts": {
+    "local": "NODE_ENV='local' nodemon ./server.js",
+    "dev": "NODE_ENV='development' nodemon ./server.js",
+    "start": "node server.js",
+    "test": "mocha --parallel \"tests/**/*.test.js\" --timeout 15000",
+    "watch": "mocha --parallel \"tests/**/*.test.js\" --timeout 5000 --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JRyGithub/frenchCompanyPhoneFinder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JRyGithub/frenchCompanyPhoneFinder/issues"
+  },
+  "homepage": "https://github.com/JRyGithub/frenchCompanyPhoneFinder#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "axios": "^0.25.0",
+    "cors": "^2.8.5",
+    "dotenv": "^15.0.1",
+    "express": "^4.17.2"
+  }
+}
